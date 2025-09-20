@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 const tiers = [
   {
     name: "Signature 3 BHK",
-    price: "₹6.50 Cr+",
+    price: "₹6.50 Cr*",
     features: ["2,500–2,900 sq.ft.", "Dual-aspect living", "Deck with golf views", "2 car parks"],
     accent: "from-gold to-gold-light",
   },
@@ -73,7 +73,6 @@ const PricingSection: React.FC = () => {
                   <span className="text-3xl md:text-4xl font-extrabold text-white">
                     {tier.price}
                   </span>
-                  <span className="text-white/70">all inclusive*</span>
                 </div>
 
                 <ul className="mt-6 space-y-3">

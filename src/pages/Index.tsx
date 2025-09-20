@@ -8,7 +8,6 @@ import FloorPlanSection from "@/components/FloorPlanSection";
 import MasterLayoutSection from "@/components/MasterLayoutSection";
 import AmenitiesSection from "@/components/AmenitiesSection";
 import LocationAdvantage from "@/components/LocationAdvantage";
-import StatsSection from "@/components/StatsSection";
 import Footer from "@/components/Footer";
 import PopupForm from "@/components/PopupForm";
 
@@ -60,7 +59,6 @@ const Index = () => {
       <MasterLayoutSection />
       <AmenitiesSection />
       <LocationAdvantage />
-      <StatsSection />
       <Footer />
       
       {/* Popup Form */}

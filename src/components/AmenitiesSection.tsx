@@ -26,8 +26,6 @@ import {
   Crown,
   Gem,
   Eye,
-  Share2,
-  Maximize2,
   Plus,
   Minus,
   CheckCircle,
@@ -281,22 +279,16 @@ const AmenitiesSection = () => {
                         </div>
                       </div>
 
-                      {/* Action Buttons */}
-                      <div className="flex space-x-3">
+                      {/* Action Button */}
+                      <div className="flex justify-center">
                         <button 
-                          className="flex-1 bg-gradient-to-r from-primary to-gold text-white py-3 rounded-lg font-bold text-sm hover:from-primary/90 hover:to-gold/90 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                          className="bg-gradient-to-r from-primary to-gold text-white py-3 px-8 rounded-lg font-bold text-sm hover:from-primary/90 hover:to-gold/90 transition-all duration-300 transform hover:scale-105 shadow-lg"
                           onClick={() => window.open('https://api.whatsapp.com/send?phone=+917303665082&text=Hi,%20I%20want%20to%20schedule%20a%20site%20visit%20for%20L%20and%20T%20Green%20Reserve.')}
                         >
                           <div className="flex items-center justify-center space-x-2">
                             <Eye className="w-4 h-4" />
                             <span>Schedule Visit</span>
                           </div>
-                        </button>
-                        <button className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all duration-300 shadow-md">
-                          <Share2 className="w-4 h-4" />
-                        </button>
-                        <button className="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all duration-300 shadow-md">
-                          <Maximize2 className="w-4 h-4" />
                         </button>
                       </div>
                     </div>

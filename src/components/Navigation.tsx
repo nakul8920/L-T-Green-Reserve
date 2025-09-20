@@ -51,6 +51,18 @@ const Navigation = () => {
 
   return (
     <>
+      <style jsx>{`
+        @keyframes slideInFromTop {
+          from {
+            opacity: 0;
+            transform: translateY(-20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-green-900/90 backdrop-blur-md border-b border-green-700 shadow-xl' 
@@ -140,68 +152,83 @@ const Navigation = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                className={`md:hidden transition-all duration-300 ${
+                className={`md:hidden transition-all duration-300 hover:scale-110 ${
                   isScrolled
                     ? 'text-white hover:bg-white/10'
                     : 'text-gray-700 hover:bg-gray-100'
                 }`}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                <div className="relative w-5 h-5">
+                  <Menu className={`w-5 h-5 transition-all duration-300 ${
+                    isMenuOpen ? 'opacity-0 rotate-180' : 'opacity-100 rotate-0'
+                  }`} />
+                  <X className={`w-5 h-5 absolute top-0 left-0 transition-all duration-300 ${
+                    isMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-180'
+                  }`} />
+                </div>
               </Button>
             </div>
           </div>
 
           {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className={`md:hidden border-t py-4 transition-all duration-300 ${
-              isScrolled 
-                ? 'border-green-700 bg-green-900/95 backdrop-blur-md' 
-                : 'border-gray-200 bg-white'
-            }`}>
-              <div className="space-y-2">
-                {menuItems.map((item) => (
+          <div className={`md:hidden border-t transition-all duration-500 ease-in-out overflow-hidden ${
+            isMenuOpen 
+              ? 'max-h-screen opacity-100 py-4' 
+              : 'max-h-0 opacity-0 py-0'
+          } ${
+            isScrolled 
+              ? 'border-green-700 bg-green-900/95 backdrop-blur-md' 
+              : 'border-gray-200 bg-white'
+          }`}>
+              <div className="space-y-1">
+                {menuItems.map((item, index) => (
                   <button
                     key={item.name}
                     onClick={() => {
                       navigateToSection(item.path);
                       setIsMenuOpen(false);
                     }}
-                    className={`block w-full text-left px-4 py-3 rounded-lg transition-all duration-200 font-medium ${
+                    className={`block w-full text-left px-4 py-3 rounded-lg transition-all duration-300 font-medium transform hover:scale-105 hover:shadow-lg ${
                       isScrolled
                         ? 'text-white hover:text-gold hover:bg-white/10'
                         : 'text-gray-700 hover:text-primary hover:bg-primary/10'
                     }`}
+                    style={{
+                      animationDelay: `${index * 50}ms`,
+                      animation: isMenuOpen ? 'slideInFromTop 0.3s ease-out forwards' : 'none'
+                    }}
                   >
                     {item.name}
                   </button>
                 ))}
-                <div className={`pt-4 border-t space-y-2 ${
+                <div className={`pt-4 border-t ${
                   isScrolled ? 'border-green-700' : 'border-gray-200'
                 }`}>
-                  <Button
-                    variant="outline"
-                    className={`w-full justify-start space-x-2 px-4 py-3 transition-all duration-300 ${
-                      isScrolled
-                        ? 'border-gold text-gold hover:bg-gold/20'
-                        : 'border-primary text-primary bg-primary/5 hover:bg-primary hover:text-white'
-                    }`}
-                    onClick={() => window.open('tel:+917303665082')}
-                  >
-                    <Phone className="w-4 h-4" />
-                    <span className="font-bold">+91 7303665082</span>
-                  </Button>
-                  <Button
-                    className="w-full justify-start space-x-2 px-4 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700 transition-all duration-300"
-                    onClick={() => window.open('https://api.whatsapp.com/send?phone=+917303665082&text=Hi,%20I%20want%20to%20know%20more%20about%20L%20and%20T%20Green%20Reserve.')}
-                  >
-                    <MessageCircle className="w-4 h-4" />
-                    <span className="font-semibold">WhatsApp</span>
-                  </Button>
+                  <div className="flex space-x-3 mx-2">
+                    <Button
+                      variant="outline"
+                      className={`flex-1 justify-center space-x-1 px-3 py-2.5 transition-all duration-300 ${
+                        isScrolled
+                          ? 'border-gold text-gold hover:bg-gold/20'
+                          : 'border-primary text-primary bg-primary/5 hover:bg-primary hover:text-white'
+                      }`}
+                      onClick={() => window.open('tel:+917303665082')}
+                    >
+                      <Phone className="w-3 h-3" />
+                      <span className="font-bold text-xs">Call</span>
+                    </Button>
+                    <Button
+                      className="flex-1 justify-center space-x-1 px-3 py-2.5 bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700 transition-all duration-300"
+                      onClick={() => window.open('https://api.whatsapp.com/send?phone=+917303665082&text=Hi,%20I%20want%20to%20know%20more%20about%20L%20and%20T%20Green%20Reserve.')}
+                    >
+                      <MessageCircle className="w-3 h-3" />
+                      <span className="font-semibold text-xs">WhatsApp</span>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
-          )}
         </div>
       </nav>
 
