@@ -73,7 +73,7 @@ const HeroSection = () => {
             <div className="mb-2 sm:mb-3 p-2 sm:p-3 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg flex flex-col items-center text-center min-h-[80px] sm:min-h-[100px] md:min-h-[120px] lg:min-h-[150px]">
               <span className="font-semibold text-gray-700 text-xs sm:text-sm">Luxury 3, 4 & 5 BHK Starting</span>
               <div className="flex-1 flex items-center">
-                <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-black text-primary tracking-tight">₹ 6.50 Cr*</span>
+                <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-black text-primary tracking-tight">₹ 5.99 Cr*</span>
               </div>
               <span className="text-gray-600 font-medium text-xs">Onwards</span>
             </div>

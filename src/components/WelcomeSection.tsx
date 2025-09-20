@@ -8,7 +8,7 @@ const WelcomeSection = () => {
     { title: "6-Acre Development", highlight: "Premium Community" },
     { title: "45+ Floors", highlight: "Sky-High Living" },
     { title: "600+ Units", highlight: "3, 4 & 5 BHK" },
-    { title: "₹6.50 Cr*", highlight: "Starting Price" }
+    { title: "₹5.99 Cr*", highlight: "Starting Price" }
   ];
 
   return (
@@ -55,7 +55,7 @@ const WelcomeSection = () => {
               <div className="text-gray-500 text-xs uppercase tracking-wider">Units</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-1">₹6.50Cr*</div>
+              <div className="text-3xl font-bold text-primary mb-1">₹5.99Cr*</div>
               <div className="text-gray-500 text-xs uppercase tracking-wider">Starting</div>
             </div>
           </div>
@@ -81,7 +81,7 @@ const WelcomeSection = () => {
                 <p className="text-base text-gray-600 leading-relaxed">
                   Designed by renowned architect <span className="text-primary font-semibold">Hafeez Contractor</span>, 
                   the project offers expansive 3, 4, and 5 BHK residences with prices starting from 
-                  <span className="text-primary font-bold"> ₹6.50 Cr onwards</span>.
+                  <span className="text-primary font-bold"> ₹5.99 Cr* onwards</span>.
                 </p>
               </div>
             </div>
@@ -149,7 +149,7 @@ const WelcomeSection = () => {
             {/* Floating Elements */}
             <div className="absolute -top-6 -right-6 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-black rounded-2xl shadow-3xl p-5 border border-yellow-300 ring-2 ring-gold/40">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-black mb-1 tracking-tight drop-shadow">₹6.50 Cr*</div>
+                <div className="text-3xl md:text-4xl font-black mb-1 tracking-tight drop-shadow">₹5.99 Cr*</div>
                 <div className="text-[11px] md:text-xs font-semibold uppercase tracking-wider">Starting Price</div>
               </div>
             </div>

@@ -10,7 +10,7 @@ Grow Infinity Realtors is a highly regarded real estate agent firm based in Noid
 - Yamuna Expressway, Siddharth Vihar, Noida Extension
 
 ## Project Highlights
-- Luxury 3, 4 & 5 BHK residences — starting at ₹6.50 Cr*
+- Luxury 3, 4 & 5 BHK residences — starting at ₹5.99 Cr*
 - Premium theme with responsive, mobile-first UI/UX
 - Designed by Hafeez Contractor (as highlighted in hero/offer strip)
 - Golf-view positioning, sector/location emphasis (Sector 128, Noida Expressway)

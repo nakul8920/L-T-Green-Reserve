@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 const tiers = [
   {
     name: "Signature 3 BHK",
-    price: "₹6.50 Cr*",
+    price: "₹5.99 Cr*",
     features: ["2,500–2,900 sq.ft.", "Dual-aspect living", "Deck with golf views", "2 car parks"],
     accent: "from-gold to-gold-light",
   },

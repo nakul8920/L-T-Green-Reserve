@@ -13,7 +13,7 @@ const FloorPlanSection = () => {
       id: 1,
       name: "Signature 3 BHK",
       size: "2,500 - 2,900 sq.ft.",
-      price: "₹6.50 Cr*",
+      price: "₹5.99 Cr*",
       bedrooms: 3,
       bathrooms: 3,
       image: "/floor-1.jpeg",
