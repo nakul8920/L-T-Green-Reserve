@@ -3,22 +3,22 @@ import ContactForm from "./ContactForm";
 
 const tiers = [
   {
-    name: "Signature 3 BHK",
-    price: "₹5.99 Cr*",
-    features: ["2,500–2,900 sq.ft.", "Dual-aspect living", "Deck with golf views", "2 car parks"],
+    name: "Majesta 3 BHK",
+    price: "₹6.25 Cr*",
+    features: ["2850 sq.ft.", "Dual-aspect living", "Deck with golf views", "2 car parks"],
     accent: "from-gold to-gold-light",
   },
   {
     name: "Presidential 4 BHK",
     price: "On Request",
-    features: ["3,300–3,800 sq.ft.", "Corner-plan privacy", "Private lounge", "3 car parks"],
+    features: ["3555 sq.ft.", "Corner-plan privacy", "Private lounge", "3 car parks"],
     highlight: true,
     accent: "from-gold to-white/80",
   },
   {
-    name: "Sky Villa 5 BHK",
+    name: "Rgalia 5 BHK",
     price: "On Request",
-    features: ["5,200+ sq.ft.", "Double-height living", "Exclusive lift lobby", "Terrace with plunge"],
+    features: ["5720 sq.ft.", "Double-height living", "Exclusive lift lobby", "Terrace with plunge"],
     accent: "from-gold-dark to-gold",
   },
 ];

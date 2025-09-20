@@ -11,9 +11,9 @@ const FloorPlanSection = () => {
   const floorPlans = [
     {
       id: 1,
-      name: "Signature 3 BHK",
-      size: "2,500 - 2,900 sq.ft.",
-      price: "₹5.99 Cr*",
+      name: "Majesta 3 BHK",
+      size: "2850 sq.ft.",
+      price: "₹6.25 Cr*",
       bedrooms: 3,
       bathrooms: 3,
       image: "/floor-1.jpeg",
@@ -22,8 +22,8 @@ const FloorPlanSection = () => {
     },
     {
       id: 2,
-      name: "Presidential 4 BHK",
-      size: "3,300 - 3,800 sq.ft.",
+      name: "Millenia 3 BHK",
+      size: "3075 sq.ft.",
       price: "Price on Request",
       bedrooms: 4,
       bathrooms: 4,
@@ -33,8 +33,8 @@ const FloorPlanSection = () => {
     },
     {
       id: 3,
-      name: "Sky Villa 5 BHK",
-      size: "5,200+ sq.ft.",
+      name: "Presidential 4 BHK",
+      size: "3555 sq.ft.",
       price: "Price on Request",
       bedrooms: 5,
       bathrooms: 5,
@@ -44,8 +44,8 @@ const FloorPlanSection = () => {
     },
     {
       id: 4,
-      name: "Executive 3 BHK",
-      size: "2,200 - 2,500 sq.ft.",
+      name: "Royale 5 BHK",
+      size: "5085 sq.ft.",
       price: "Price on Request",
       bedrooms: 3,
       bathrooms: 2,
@@ -55,8 +55,8 @@ const FloorPlanSection = () => {
     },
     {
       id: 5,
-      name: "Luxury 4 BHK",
-      size: "3,000 - 3,500 sq.ft.",
+      name: "Rgalia 5 BHK",
+      size: "5720 sq.ft.",
       price: "Price on Request",
       bedrooms: 4,
       bathrooms: 3,
