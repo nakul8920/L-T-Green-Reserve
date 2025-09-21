@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Real Estate Design System - L&T Green Reserve */
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --background: 152 78% 15%; /* rgb(9 72 42) approximated in HSL */
+    --foreground: 0 0% 100%;
+
+    /* Premium Amber/Orange Brand shifted to deep emerald primary */
+    --primary: 152 78% 28%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 152 70% 36%;
+    --primary-dark: 152 78% 20%;
+
+    /* Luxury Gold Accents - Premium Dark & Shiny */
+    --gold: 45 85% 45%;
+    --gold-foreground: 0 0% 9%;
+    --gold-light: 45 85% 55%;
+    --gold-dark: 45 85% 35%;
+
+    /* Premium Green (Golf Theme) */
+    --green: 152 78% 28%;
+    --green-foreground: 0 0% 100%;
+    --green-light: 152 70% 36%;
+    --green-dark: 152 78% 20%;
+
+    /* Card & Surface Colors */
+    --card: 0 0% 100% / 0.06; /* translucent on green bg */
+    --card-foreground: 0 0% 100%;
+    --card-overlay: 0 0% 100% / 0.08;
+
+    /* Interactive Elements */
+    --secondary: 0 0% 100% / 0.06;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 100% / 0.08;
+    --muted-foreground: 0 0% 90%;
+    
+    --accent: 43 96% 56% / 0.12; /* subtle gold tint */
+    --accent-foreground: 0 0% 100%;
+
+    /* Form & Input Colors */
+    --input: 0 0% 100% / 0.16;
+    --input-focus: 43 96% 56%;
+    --border: 0 0% 100% / 0.16;
+    --ring: 43 96% 56%;
+
+    /* Status Colors */
+    --success: 152 78% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 48 96% 53%;
+    --warning-foreground: 0 0% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Layout */
+    --radius: 0.75rem;
+
+    --sidebar-background: 152 78% 13%;
+
+    --sidebar-foreground: 0 0% 98%;
+
+    --sidebar-primary: 152 78% 20%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 43 96% 56% / 0.12;
+
+    --sidebar-accent-foreground: 0 0% 98%;
+
+    --sidebar-border: 0 0% 100% / 0.16;
+
+    --sidebar-ring: 43 96% 56%;
+  }
+
+  .dark {
+    --background: 152 78% 13%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 100% / 0.06;
+    --card-foreground: 0 0% 98%;
+    --card-overlay: 0 0% 100% / 0.08;
+
+    --primary: 152 78% 28%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 152 70% 36%;
+    --primary-dark: 152 78% 20%;
+
+    --gold: 45 85% 50%;
+    --gold-foreground: 0 0% 9%;
+    --gold-light: 45 85% 60%;
+    --gold-dark: 45 85% 40%;
+
+    --green: 152 78% 28%;
+    --green-foreground: 0 0% 100%;
+    --green-light: 152 70% 36%;
+    --green-dark: 152 78% 20%;
+
+    --secondary: 0 0% 100% / 0.06;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 100% / 0.08;
+    --muted-foreground: 0 0% 85%;
+    
+    --accent: 43 96% 56% / 0.12;
+    --accent-foreground: 0 0% 98%;
+
+    --input: 0 0% 100% / 0.16;
+    --input-focus: 43 96% 61%;
+    --border: 0 0% 100% / 0.16;
+    --ring: 43 96% 61%;
+
+    --success: 152 78% 41%;
+    --warning: 48 96% 58%;
+    --destructive: 0 84% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Premium Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent;
+    background-size: 200% 200%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Luxury Button Styles */
+  .btn-luxury {
+    @apply bg-gradient-to-r from-gold-dark via-gold to-gold-light text-black font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300;
+    background-size: 200% 200%;
+    animation: buttonShimmer 4s ease-in-out infinite;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+  }
+
+  .btn-luxury:hover {
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
+    background-position: 100% 50%;
+  }
+
+  @keyframes buttonShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .btn-outline-luxury {
+    @apply border-2 border-gold text-white bg-transparent hover:bg-gold/20 font-semibold px-6 py-3 rounded-lg transition-all duration-300;
+  }
+
+  /* Card Overlays */
+  .card-overlay {
+    @apply bg-white/95 backdrop-blur-lg border border-gray-200 shadow-2xl;
+  }
+
+  /* Enhanced shadows */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Hero Background */
+  .hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65));
+  }
+
+  /* Reusable gold gradient utilities */
+  .bg-gold-gradient {
+    @apply bg-gradient-to-r from-gold-dark via-gold to-gold-light;
+    background-size: 200% 200%;
+    animation: gradientShimmer 5s ease-in-out infinite;
+  }
+  
+  @keyframes gradientShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  .ring-gold {
+    @apply ring-gold/40;
+  }
+}
+
+@layer utilities {
+  /* Dual-track marquee: duplicates content and translates by 50% for a perfect loop */
+  @keyframes marqueeX {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .marquee-viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .marquee-inner {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    will-change: transform;
+    animation: marqueeX 35s linear infinite;
+  }
+
+  /* Flip Card Animation */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
